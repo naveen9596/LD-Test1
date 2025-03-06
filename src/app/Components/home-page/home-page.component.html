@@ -1,0 +1,97 @@
+<!-- 
+ 
+Team Name : L & D Interstellar
+Project Name : Code Dribble
+Started Date : 04-03-2025
+Expected End Date : 04-03-2025
+Description: this component is used for Login Purpose.
+
+
+-->
+
+<!-- this block is visualize the Home Page -->
+ <div class="Homepage">
+    <!-- this block is visualize the Side bar of the Dashboard Page -->
+    <div class="inner-HomePage">
+        <div class="sidebar-outer">
+        <div class="sidebar-contents">
+            <img src="./assets/Login/Login-FormLogo.svg" alt="aspire logo">
+        </div>
+        <div class="sidebar-contents" *ngFor="let link of sideBarLinks;let ind = index">
+            <a class="sideBarLinks" routerLink="{{link.route}}" routerLinkActive="active" (click)="subNavLink(ind)">
+            <div class="sidebar">
+                <div class="sidebar-links">
+                    <i class="{{link.icon}}"></i>
+                    <label for="">{{link.pageName}}</label>
+                </div>
+                <div class="sidebar-links">
+                    <i class="{{link.downArrow}}"></i>
+                </div>
+            </div>
+        </a>
+        <div class="subLinks" *ngIf="isSubNavigation">
+            <div class="sideSubLinks" *ngFor="let subLink of link.subNavigationLinks">
+                <a class="nestedLinks" routerLink="{{subLink.route}}" routerLinkActive="Active">
+                    <div class="sidebar-links">
+                        <!-- <i class="{{subLink.icon}}"></i> -->
+                        <label for="">{{subLink.pageName}}</label>
+                    </div>
+                </a>
+            </div>
+        </div>
+          
+        </div>
+        </div>
+        <div class="sidebar-contents logout">
+            <div class="sidebar">
+                <a routerLink="">
+                <div class="sidebar-links">
+                    <i class="ph ph-sign-out"></i>
+                    <label for="">Logout</label>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- this block is visualize the Nav Bar -->
+    <div class="inner-HomePage">
+        <div class="homePage-main">
+            <div class="main-contents">
+                <div class="inner-main-contents">
+                    <i class="ph ph-list"></i>
+                </div>
+                <div class="inner-main-contents">
+                    <label for="">Talent Nurturing | Management</label>
+                </div>
+            </div>
+            <div class="main-contents">
+                <div class="inner-main-contents">
+                    <input type="text" placeholder="Search" class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                </div>
+                <div class="inner-main-contents">
+                    <i class="ph ph-gear"></i>
+                </div>
+                <div class="inner-main-contents">
+                    <i class="ph ph-bell"></i>
+                </div>
+                <div class="inner-main-contents">
+                    <div class="profile">
+                        <img src="./assets/Dashboard/DashboardProfile.svg" alt="profile image">
+                    </div>
+                    <div class="profile">
+                        <div class="profile-contents">
+                            <h3>Manikandan Obulisamy</h3>
+                        </div>
+                        <div class="profile-contents">
+                            <h4>Trainer</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homePage-main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+ </div>
