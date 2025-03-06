@@ -29,7 +29,7 @@ Description: this component is used for Login Purpose.
                 </div>
             </div>
         </a>
-        <div class="subLinks" *ngIf="isSubNavigation">
+        <div class="subLinks" *ngIf="isSubNavigation[ind]">
             <div class="sideSubLinks" *ngFor="let subLink of link.subNavigationLinks">
                 <a class="nestedLinks" routerLink="{{subLink.route}}" routerLinkActive="Active">
                     <div class="sidebar-links">
@@ -91,7 +91,7 @@ Description: this component is used for Login Purpose.
             </div>
         </div>
         <div class="homePage-main">
-            <router-outlet></router-outlet>
+           <router-outlet></router-outlet>
         </div>
     </div>
  </div>

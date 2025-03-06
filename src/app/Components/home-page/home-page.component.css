@@ -20,7 +20,7 @@
 }
 
 .inner-HomePage:nth-child(1){
-    width: 250px;
+    width: 220px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
@@ -41,7 +41,7 @@
     align-content: space-between;
     background-color: var(--primary-color);
     color: var(--font-color);
-    width: 220px;
+    width: 200px;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -72,7 +72,7 @@ label{
 }
 
 .inner-HomePage:nth-child(2){
-    width: 81%;
+    width: 83%;
 }
 
 .homePage-main:nth-child(1){

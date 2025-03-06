@@ -10,7 +10,7 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { DashboardPageComponent } from './Components/dashboard-page/dashboard-page.component';
 import { RouterModule } from '@angular/router';
 import { TNManagementPageComponent } from './Components/tnmanagement-page/tnmanagement-page.component';
-import { FresherManagementPageComponent } from './Components/fresher-management-page/fresher-management-page.component';
+
 import { ImpactTrainingPageComponent } from './Components/impact-training-page/impact-training-page.component';
 
 @NgModule({
@@ -20,7 +20,6 @@ import { ImpactTrainingPageComponent } from './Components/impact-training-page/i
     HomePageComponent,
     DashboardPageComponent,
     TNManagementPageComponent,
-    FresherManagementPageComponent,
     ImpactTrainingPageComponent
   ],
   imports: [
