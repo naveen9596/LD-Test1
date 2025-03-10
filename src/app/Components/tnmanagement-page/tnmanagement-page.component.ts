@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./tnmanagement-page.component.css']
 })
 export class TNManagementPageComponent {
+  TNData:any =[];
 
+  constructor(){
+    this.TNData=[
+      {
+        "ACE_ID":"ACE12391",
+        "First_Name": "Manikandan",
+        "Last_Name": "Obulisamy",
+        "Designation": "Software Engineer",
+        "Team": "Testing"
+      }
+    ]
+  }
 }

@@ -71,13 +71,13 @@ Description: this component is used for Talent Nuturing Management Purpose.
             <td><input type="text" placeholder="Filter by Team"> <i class="ph ph-magnifying-glass"></i></td>
             <td><input type="text" placeholder="Filter by ACE ID"> <i class="ph ph-magnifying-glass"></i></td>
         </tr>
-        <tr class="table-data">
+        <tr class="table-data" *ngFor="let data of TNData;let i=index">
             <td><input type="checkbox"></td>
-            <td class="data">ACE12391</td>
-            <td class="data">Manikandan</td>
-            <td class="data">Obulisamy</td>
-            <td class="data">Associate</td>
-            <td class="data">Testing</td>
+            <td class="data">{{data.ACE_ID}}</td>
+            <td class="data">{{data.First_Name}}</td>
+            <td class="data">{{data.Last_Name}}</td>
+            <td class="data">{{data.Designation}}</td>
+            <td class="data">{{data.Team}}</td>
             <td class="data">
                 <button><i class="ph ph-pencil-simple"></i></button>
                 <button><i class="ph ph-trash"></i></button>
