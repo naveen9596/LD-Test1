@@ -138,18 +138,22 @@ label{
     font-size: 0.7vw;
     color: var(--font-color);
 }
+
 .subLinks{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
 }
+
 .nestedLinks{
     display: flex;
     flex-direction: row;
     color: var(--font-color);
     text-decoration: none;
     padding: 6px;
-    margin-top: 10px;
     margin-left: 20px;
+    height: 30px;
 }
 .Active{
     color: var(--secondary-color);

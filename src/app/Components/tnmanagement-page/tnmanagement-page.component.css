@@ -224,6 +224,7 @@ td button{
     flex-direction: row;
     gap: 7px;
 }
+
 .data:nth-child(8){
     justify-content: center;
 }
