@@ -5,6 +5,7 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { DashboardPageComponent } from './Components/dashboard-page/dashboard-page.component';
 import { TNManagementPageComponent } from './Components/tnmanagement-page/tnmanagement-page.component';
 import { ImpactTrainingPageComponent } from './Components/impact-training-page/impact-training-page.component';
+import { InternshipComponent } from './Components/Internship/internship.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path:"impact-training",
         component:ImpactTrainingPageComponent
+      },
+      {
+        path:"Internship",
+        component: InternshipComponent
       }
 
     ]

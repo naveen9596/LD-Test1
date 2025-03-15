@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { TNManagementPageComponent } from './Components/tnmanagement-page/tnmanagement-page.component';
 
 import { ImpactTrainingPageComponent } from './Components/impact-training-page/impact-training-page.component';
+import { ExcelDatePipePipe } from './Custompipes/excel-date-pipe.pipe';
+import { InternshipComponent } from './Components/Internship/internship.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ImpactTrainingPageComponent } from './Components/impact-training-page/i
     HomePageComponent,
     DashboardPageComponent,
     TNManagementPageComponent,
-    ImpactTrainingPageComponent
+    ImpactTrainingPageComponent,
+    ExcelDatePipePipe,
+    InternshipComponent
   ],
   imports: [
     BrowserModule,

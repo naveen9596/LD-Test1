@@ -31,8 +31,13 @@ export class HomePageComponent {
     pageName:"TN Management",
     icon:"ph ph-identification-badge",
     route:"tn-management",
-    downArrow:"",
-    subNavigationLinks:[]
+    downArrow:"ph ph-caret-down",
+    subNavigationLinks:[
+      {
+        pageName:"TN Team Structure",
+        route:"impact-training"
+        }
+    ]
   },{
     pageName:"Fresher Management",
     icon:"ph ph-student",
@@ -49,7 +54,7 @@ export class HomePageComponent {
       },
       {
       pageName:"Internship",
-      route:"tn-management"
+      route:"Internship"
       },
       {
       pageName:"Shine",

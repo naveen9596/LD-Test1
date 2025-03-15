@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 import { TraineeDetailsService } from 'src/app/services/trainee-details.service';
 
 @Component({
-  selector: 'app-impact-training-page',
-  templateUrl: './impact-training-page.component.html',
-  styleUrls: ['./impact-training-page.component.css']
+  selector: 'app-internship',
+  templateUrl: './internship.component.html',
+  styleUrls: ['./internship.component.css']
 })
-export class ImpactTrainingPageComponent {
-  TNData:any =[];
+export class InternshipComponent {
+ TNData:any =[];
   checkTNData = [];
   checkboxIndex= 1;
   traineeDetail:any = {};
@@ -81,7 +81,7 @@ export class ImpactTrainingPageComponent {
 
   //this method is used to retrieve the Trainee Data
   retrieveImpactTraineeDetails(){
-    this.traineeDetailsService.impactTraineeDetails().subscribe((details)=>{
+    this.traineeDetailsService.internshipDetails().subscribe((details)=>{
        this.TNData = details;
        this.checkTNData = this.TNData;
     });
@@ -164,7 +164,7 @@ export class ImpactTrainingPageComponent {
   // this method is used to remove the member
   deleteMember(index:any){
     if(confirm("sure you want to Remove "+this.TNData[index].NAME)) {
-      this.traineeDetailsService.deleteImpactTrainee(this.TNData[index]);
+      this.traineeDetailsService.deleteInternship(this.TNData[index]);
       this.TNData.splice(index,1);
       this.checkTNData = this.TNData;
     }
@@ -208,7 +208,7 @@ export class ImpactTrainingPageComponent {
     const checkbox = document.getElementById("parentCheckBox") as HTMLInputElement;
     if(checkbox.checked){
     if(confirm("sure you want to remove all Members")){
-    this.traineeDetailsService.deleteAllImpactTrainees();
+    this.traineeDetailsService.deleteAllInternship();
     this.TNData = [];
     this.checkTNData = [];
     checkbox.checked = false;
@@ -252,6 +252,6 @@ export class ImpactTrainingPageComponent {
 
   //this method is used to upload the file
   uploadFile(){
-    this.traineeDetailsService.sendExcelFile(this.selectedFile);
+    this.traineeDetailsService.internshipSendExcelFile(this.selectedFile);
   }
 }
